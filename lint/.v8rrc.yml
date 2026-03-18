@@ -1,0 +1,36 @@
+# .v8rrc.yml — validated configuration for v8r
+$schema: "https://raw.githubusercontent.com/chris48s/v8r/main/config-schema.json"
+
+# Verbosity level (0 = default, higher = more detailed logs)
+verbose: 1
+
+# Format of output: 'text' or 'json'
+outputFormat: "text"
+
+# Glob patterns of files or directories to validate
+patterns:
+  - "**/*.json"
+  - "**/*.yaml"
+  - "**/*.yml"
+
+# Optional: suppress exit code 2 on validation failure
+ignoreErrors: false
+
+# Files containing patterns to ignore (e.g., .gitignore-style globs)
+ignorePatternFiles:
+  - ".gitignore"
+
+# Optional custom schema catalog (can augment/override SchemaStore)
+customCatalog:
+  schemas:
+    - name: "Custom JSON Schema for Configs"
+      fileMatch:
+        - "config/*.custom.json"
+        - "settings/*.schema.json"
+      location: "./schemas/custom-schema.json"
+      description: "Schema for internal config formats"
+      parser: "json" # Optional (valid: 'json', 'json5', 'yaml', 'toml', etc.)
+
+# Optional plugin loading (e.g., external schema providers or validators)
+plugins:
+  - "package:@my-org/v8r-plugin"

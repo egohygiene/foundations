@@ -1,0 +1,24 @@
+{
+    "threshold": 0,
+    "reporters": ["html", "consoleFull", "json", "markdown"],
+    "ignore": [
+        "**/__snapshots__/**",
+        "**/node_modules/**",
+        "**/.history/**",
+        "**/.cache/**",
+        "**/reports/**",
+        "**/logs/**",
+        "**/coverage/**",
+        "**/venv/**",
+        "**/.venv/**",
+        "**/.pnpm-store/**",
+        "**/config/styles/**",
+        "**/config/.bandit.yml",
+        "package-lock.json",
+        "**/package-lock.json",
+        "**/*.lock"
+    ],
+    "absolute": true,
+    "gitignore": true,
+    "output": "reports/jscpd"
+}

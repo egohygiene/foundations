@@ -1,0 +1,42 @@
+{
+  "extends": "recommended",
+  "rules": {
+    "convention.Indentation": {
+      "spaces": 4,
+      "severity": "error"
+    },
+    "size.LineLength": {
+      "maxLength": 120,
+      "severity": "warning"
+    },
+
+    "unused.UnusedImport": "error",
+    "unused.UnusedPrivateField": "error",
+    "unused.UnusedPrivateMethod": "error",
+    "unused.UnusedVariable": "error",
+
+    "naming.ClassName": {
+      "regex": "^[A-Z][a-zA-Z0-9]*$",
+      "severity": "error"
+    },
+    "naming.MethodName": {
+      "regex": "^[a-z][a-zA-Z0-9]*$",
+      "severity": "error"
+    },
+    "naming.ParameterName": {
+      "regex": "^[a-zA-Z0-9_]*$",
+      "severity": "warning"
+    },
+
+    "convention.NoDef": "off",
+    "convention.BracesForIfElse": "error",
+    "convention.SpaceAfterIf": "error",
+    "convention.SpaceAfterWhile": "error",
+    "convention.SpaceAfterFor": "error",
+
+    "formatting.NoTabCharacter": "error",
+
+    "documentation.ClassJavadoc": "off",
+    "documentation.MethodJavadoc": "off"
+  }
+}
