@@ -12,8 +12,8 @@
         "**/venv/**",
         "**/.venv/**",
         "**/.pnpm-store/**",
-        "**/config/styles/**",
-        "**/config/.bandit.yml",
+        "**/lint/prose/styles/**",
+        "**/lint/python/.bandit.yml",
         "package-lock.json",
         "**/package-lock.json",
         "**/*.lock"
