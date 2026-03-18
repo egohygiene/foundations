@@ -225,7 +225,7 @@ HTML_HTMLHINT_CONFIG_FILE: lint/html/.htmlhintrc
 
 # eslint: https://eslint.org/
 # https://megalinter.io/latest/descriptors/javascript_eslint/
-JAVASCRIPT_ES_CONFIG_FILE: lint/javascript/.eslint.config.mjs
+JAVASCRIPT_ES_CONFIG_FILE: lint/javascript/eslint.config.mjs
 
 # prettier: https://prettier.io/
 # https://megalinter.io/latest/descriptors/javascript_prettier/
@@ -257,7 +257,7 @@ JSON_PRETTIER_CONFIG_FILE: lint/javascript/.prettier.config.mjs
 
 # eslint: https://eslint.org/
 # https://megalinter.io/latest/descriptors/jsx_eslint/
-JSX_ESLINT_CONFIG_FILE: lint/javascript/.eslint.config.mjs
+JSX_ESLINT_CONFIG_FILE: lint/javascript/eslint.config.mjs
 
 # chktex: https://www.nongnu.org/chktex/
 # https://megalinter.io/latest/descriptors/latex_chktex/
@@ -325,7 +325,7 @@ PYTHON_BLACK_CONFIG_FILE: pyproject.toml
 
 # flake8: https://flake8.pycqa.org/en/latest/
 # https://megalinter.io/latest/descriptors/python_flake8/
-PYTHON_FLAKE8_CONFIG_FILE: lint/python/.flake8
+PYTHON_FLAKE8_CONFIG_FILE: lint/python/flake8
 
 # isort: https://pycqa.github.io/isort/
 # https://megalinter.io/latest/descriptors/python_isort/
@@ -501,11 +501,11 @@ TERRAFORM_TFLINT_CONFIG_FILE: lint/terraform/.tflint.hcl
 
 # eslint: https://eslint.org/
 # https://megalinter.io/latest/descriptors/typescript_eslint/
-TSX_ESLINT_CONFIG_FILE: lint/javascript/.eslint.config.mjs
+TSX_ESLINT_CONFIG_FILE: lint/javascript/eslint.config.mjs
 
 # eslint: https://eslint.org/
 # https://megalinter.io/latest/descriptors/typescript_eslint/
-TYPESCRIPT_ES_CONFIG_FILE: lint/javascript/.eslint.config.mjs
+TYPESCRIPT_ES_CONFIG_FILE: lint/javascript/eslint.config.mjs
 
 # prettier: https://prettier.io/
 # https://megalinter.io/latest/descriptors/typescript_prettier/
@@ -525,7 +525,7 @@ YAML_YAMLLINT_CONFIG_FILE: lint/yaml/.yamllint.yml
 
 # ls-lint: https://github.com/loeffel-io/ls-lint
 # https://megalinter.io/8/descriptors/repository_ls_lint/
-REPOSITORY_LS_LINT_CONFIG_FILE: lint/repository/.ls-lint.yml
+REPOSITORY_LS_LINT_CONFIG_FILE: lint/repo/.ls-lint.yml
 
 # Reporters configuration
 AZURE_COMMENT_REPORTER: false
