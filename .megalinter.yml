@@ -148,7 +148,7 @@ ACTION_ACTIONLINT_CONFIG_FILE: .github/actionlint.yaml
 
 # ansible-lint: https://ansible.readthedocs.io/projects/lint/
 # https://megalinter.io/latest/descriptors/ansible_ansible_lint/
-ANSIBLE_ANSIBLE_LINT_CONFIG_FILE: lint/ansible/.ansible-lint
+ANSIBLE_ANSIBLE_LINT_CONFIG_FILE: lint/ansible/ansible-lint.yml
 ANSIBLE_DIRECTORY: ansible
 
 # spectral: https://stoplight.io/open-source/spectral
