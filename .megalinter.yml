@@ -455,13 +455,13 @@ SNAKEMAKE_SNAKEFMT_CONFIG_FILE: lint/snakemake/.snakefmt.toml
 
 # cspell: https://github.com/streetsidesoftware/cspell
 # https://megalinter.io/latest/descriptors/spell_cspell/
-SPELL_CSPELL_CONFIG_FILE: lint/spell/.cspell.config.mjs
+SPELL_CSPELL_CONFIG_FILE: lint/prose/spell/cspell.config.json
 SPELL_CSPELL_ARGUMENTS: "--no-progress --quiet --format json --cache-location .cache/.cspellcache"
 
 # lychee: https://github.com/lycheeverse/lychee
 # https://megalinter.io/latest/descriptors/spell_lychee/
-SPELL_LYCHEE_CONFIG_FILE: lint/spell/lychee.toml
-SPELL_LYCHEE_ARGUMENTS: "--exclude-path lint/spell/.lycheeignore"
+SPELL_LYCHEE_CONFIG_FILE: lint/prose/spell/lychee.toml
+SPELL_LYCHEE_ARGUMENTS: "--exclude-path lint/prose/spell/.lycheeignore"
 
 # proselint: https://github.com/amperser/proselint
 # https://megalinter.io/latest/descriptors/spell_proselint/

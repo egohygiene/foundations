@@ -209,3 +209,6 @@ __marimo__/
 
 # Reports
 reports
+
+# VS Code history
+.history/
