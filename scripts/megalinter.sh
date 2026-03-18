@@ -51,6 +51,8 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 readonly SCRIPT_DIR
 PROJECT_ROOT="$(pwd)"
 readonly PROJECT_ROOT
+SCRIPT_NAME="$(basename "${BASH_SOURCE[0]}")"
+readonly SCRIPT_NAME
 
 # Docker image (pinned for reproducibility)
 readonly DOCKER_IMAGE="oxsecurity/megalinter@sha256:ed944524cb36342a3693f5297ab92aef7188beff0a20a396fe9e90b4dcbbacfb"
@@ -196,6 +198,7 @@ check_dependencies() {
     "awk"
     "curl"
     "git"
+    "sort"
   )
 
   local missing_dependencies=()
@@ -264,6 +267,49 @@ Options:
   --debug                       Enable debug logging
   --help                        Show this message
 EOF
+}
+
+# ------------------------------------------------------------------------------
+# get_github_repository
+#
+# @description
+# Resolve the GitHub "owner/repo" from the current git remote origin.
+#
+# Supports SSH and HTTPS remote URL formats. Returns "unknown/unknown" when
+# the remote cannot be parsed or does not exist.
+#
+# @stdout owner/repo string
+# @exitcode 0 always
+# ------------------------------------------------------------------------------
+
+get_github_repository() {
+  local remote_url
+  remote_url="$(git remote get-url origin 2>/dev/null || true)"
+
+  if [[ -z "${remote_url}" ]]; then
+    printf "unknown/unknown\n"
+    return 0
+  fi
+
+  local repo
+
+  # SSH format: git@github.com:owner/repo.git
+  if [[ "${remote_url}" =~ ^git@github\.com:([^/]+/.+)$ ]]; then
+    repo="${BASH_REMATCH[1]}"
+    repo="${repo%.git}"
+    printf "%s\n" "${repo}"
+    return 0
+  fi
+
+  # HTTPS format: https://github.com/owner/repo[.git]
+  if [[ "${remote_url}" =~ ^https://github\.com/([^/]+/.+)$ ]]; then
+    repo="${BASH_REMATCH[1]}"
+    repo="${repo%.git}"
+    printf "%s\n" "${repo}"
+    return 0
+  fi
+
+  printf "unknown/unknown\n"
 }
 
 # ------------------------------------------------------------------------------
@@ -554,7 +600,9 @@ build_linter_maps() {
 initialize_linter_maps() {
   log_debug "Initializing linter maps"
 
-  load_linter_registry | build_linter_maps
+  local registry_data
+  registry_data="$(load_linter_registry)"
+  build_linter_maps <<< "${registry_data}"
 
   log_debug "Loaded ${#LINTER_NAME_TO_DESCRIPTOR[@]} linters"
 }
@@ -669,6 +717,84 @@ resolve_linters() {
   # Output final ENABLE_LINTERS string
   # --------------------------------------------------------------------------
   printf "%s\n" "$(IFS=','; echo "${final_keys[*]}")"
+}
+
+# ------------------------------------------------------------------------------
+# Introspection Functions
+# ------------------------------------------------------------------------------
+
+# list_linters
+#
+# @description
+# Print all known linter names, one per line, sorted alphabetically.
+#
+# @stdout sorted linter names
+# ------------------------------------------------------------------------------
+
+list_linters() {
+  local name
+  for name in "${!LINTER_NAME_TO_DESCRIPTOR[@]}"; do
+    printf "%s\n" "${name}"
+  done | sort
+}
+
+# list_linter_map
+#
+# @description
+# Print all linter → descriptor mappings in "name|descriptor" format,
+# sorted alphabetically by linter name.
+#
+# @stdout sorted "name|descriptor" pairs
+# ------------------------------------------------------------------------------
+
+list_linter_map() {
+  local name
+  for name in "${!LINTER_NAME_TO_DESCRIPTOR[@]}"; do
+    printf "%s|%s\n" "${name}" "${LINTER_NAME_TO_DESCRIPTOR[$name]}"
+  done | sort
+}
+
+# list_descriptors
+#
+# @description
+# Print all known descriptor categories, one per line, sorted alphabetically.
+#
+# @stdout sorted descriptor names
+# ------------------------------------------------------------------------------
+
+list_descriptors() {
+  local descriptor
+  for descriptor in "${!DESCRIPTOR_TO_LINTERS[@]}"; do
+    printf "%s\n" "${descriptor}"
+  done | sort
+}
+
+# list_by_descriptors
+#
+# @description
+# Print all linter names that belong to the descriptor categories specified
+# by DESCRIPTOR_FILTER, one per line, sorted alphabetically.
+#
+# @stdout sorted linter names for the requested descriptors
+# ------------------------------------------------------------------------------
+
+list_by_descriptors() {
+  local descriptor name names
+
+  IFS=',' read -ra descriptor_list <<< "${DESCRIPTOR_FILTER}"
+
+  for descriptor in "${descriptor_list[@]}"; do
+    descriptor="$(printf "%s" "${descriptor}" | tr '[:lower:]' '[:upper:]')"
+
+    if [[ -n "${DESCRIPTOR_TO_LINTERS[$descriptor]:-}" ]]; then
+      IFS=',' read -ra names <<< "${DESCRIPTOR_TO_LINTERS[$descriptor]}"
+      for name in "${names[@]}"; do
+        printf "%s\n" "${name}"
+      done
+    else
+      log_warn "Unknown descriptor: ${descriptor}"
+    fi
+  done | sort
 }
 
 # ------------------------------------------------------------------------------
@@ -792,13 +918,13 @@ setup_environment() {
 }
 
 # ------------------------------------------------------------------------------
-# run
+# run_workflow
 #
 # @description
 # Execute the main MegaLinter workflow.
 # ------------------------------------------------------------------------------
 
-run() {
+run_workflow() {
   log_info "Starting execution"
 
   # --------------------------------------------------------------------------
@@ -873,7 +999,7 @@ main() {
   # --------------------------------------------------------------------------
   # Run main workflow
   # --------------------------------------------------------------------------
-  run
+  run_workflow
 }
 
 # ------------------------------------------------------------------------------
