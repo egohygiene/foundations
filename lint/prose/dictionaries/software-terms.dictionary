@@ -1,22 +1,15 @@
-
-# Add words here to reduce false positives during spell checking.
 # Custom Dictionary: Software Terms
-# This dictionary contains a list of software-related terms to be used by CSpell.
-algorithm
+# General-purpose tooling, protocols, package managers, runtime platforms, and Apple/Xcode toolchain vocabulary.
+# Domain-specific terms (backend, frontend, DevOps, programming paradigms) belong in their respective dictionaries.
 asdf
-async
-await
 backend
 blazingly
 cache
-callback
 CLI
 codegen
 commitizen
 config
-dartfrog
 data
-debugging
 DevOps
 dotenvx
 endtemplate
@@ -27,7 +20,6 @@ framework
 frontend
 gcloud
 genhtml
-GraphQL
 HTTP
 HTTPS
 Interop
@@ -35,18 +27,15 @@ JSON
 keypair
 lcov
 lerna
-Linter
 livestream
 lodash
 loopback
 memoize
-middleware
 minification
 minimalistic
 mocktail
 monorepo
 NodeJS
-OAuth
 omniverse
 package.json
 pana
@@ -62,25 +51,19 @@ rollup
 runtime
 SPDX
 SQL
-SQLite
 supabase
 todos
 tsbuildinfo
-tsconfig
 tslib
-TypeScript
 unawaited
 utils
 UUID
-vite
 vitejs
 vitest
 vscode
-WebSocket
 xcassets
 xcconfig
 xcode
-xcodeb
 xcodeproj
 xcplayground
 xcscheme

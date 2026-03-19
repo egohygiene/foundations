@@ -10,14 +10,11 @@ cherry-pick
 closure
 code-review
 debugging
-sourceable
 dependency-injection
 design-pattern
 diff
 encapsulation
 eslint
-secp256k1
-scannerwork
 event-loop
 factory
 formatter
@@ -40,7 +37,10 @@ pull-request
 rebase
 recursion
 refactor
+scannerwork
+secp256k1
 singleton
+sourceable
 state-management
 stub
 tsconfig
