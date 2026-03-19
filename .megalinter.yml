@@ -455,8 +455,15 @@ SNAKEMAKE_SNAKEFMT_CONFIG_FILE: lint/snakemake/.snakefmt.toml
 
 # cspell: https://github.com/streetsidesoftware/cspell
 # https://megalinter.io/latest/descriptors/spell_cspell/
-SPELL_CSPELL_CONFIG_FILE: lint/prose/spell/cspell.config.json
-SPELL_CSPELL_ARGUMENTS: "--no-progress --quiet --format json --cache-location .cache/.cspellcache"
+SPELL_CSPELL_CONFIG_FILE: lint/prose/spell/cspell.megalinter.json
+SPELL_CSPELL_CLI_LINT_MODE: project
+SPELL_CSPELL_FILE_EXTENSIONS: ["*"]
+
+SPELL_CSPELL_PRE_COMMANDS:
+  - command: >
+      npm install --no-audit --no-fund --silent
+      @cspell/cspell-json-reporter
+    cwd: root
 
 # lychee: https://github.com/lycheeverse/lychee
 # https://megalinter.io/latest/descriptors/spell_lychee/

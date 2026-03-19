@@ -937,6 +937,8 @@ run_workflow() {
   # --------------------------------------------------------------------------
   build_docker_envs
 
+  log_info "Resolved linters: ${ENABLE_LINTERS:-ALL}"
+
   if [[ "${DEBUG_MODE}" == "true" ]]; then
     log_debug "ENABLE_LINTERS=${ENABLE_LINTERS:-ALL}"
   fi

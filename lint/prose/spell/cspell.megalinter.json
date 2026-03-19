@@ -1,0 +1,14 @@
+{
+    "import": [
+        "./cspell.json"
+    ],
+    "reporters": [
+        "default",
+        [
+            "@cspell/cspell-json-reporter",
+            {
+                "outFile": "../../../reports/cspell/cspell-report.json"
+            }
+        ]
+    ]
+}

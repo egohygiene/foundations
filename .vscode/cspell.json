@@ -1,5 +1,5 @@
 {
   "import": [
-    "../lint/prose/spell/cspell.config.json"
+    "${cwd}/lint/prose/spell/cspell.json"
   ]
 }

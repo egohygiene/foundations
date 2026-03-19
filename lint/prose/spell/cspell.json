@@ -1,0 +1,134 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "allowCompoundWords": false,
+  "cache": {
+    "useCache": true,
+    "cacheLocation": "../../../.cache/cspell/cspell_cache.json",
+    "cacheStrategy": "content"
+  },
+  "caseSensitive": false,
+  "description": "Structured spell-checking configuration",
+  "dictionaries": [
+    "backend-terms",
+    "devops-cloud-terms",
+    "frontend-terms",
+    "programming-terms",
+    "project-words",
+    "software-terms"
+  ],
+  "dictionaryDefinitions": [
+    {
+      "name": "project-words",
+      "path": "../dictionaries/project-words.dictionary",
+      "description": "Primary writable project dictionary for custom words, names, and domain-specific terminology unique to this repository.",
+      "addWords": true
+    },
+    {
+      "name": "backend-terms",
+      "path": "../dictionaries/backend-terms.dictionary",
+      "description": "Common backend development terminology including APIs, databases, authentication, and server-side concepts."
+    },
+    {
+      "name": "frontend-terms",
+      "path": "../dictionaries/frontend-terms.dictionary",
+      "description": "Frontend and UI-related terminology including frameworks, styling systems, browser concepts, and client-side patterns."
+    },
+    {
+      "name": "devops-cloud-terms",
+      "path": "../dictionaries/devops-cloud-terms.dictionary",
+      "description": "DevOps, infrastructure, and cloud-related terminology including CI/CD, containers, orchestration, and platform services."
+    },
+    {
+      "name": "programming-terms",
+      "path": "../dictionaries/programming-terms.dictionary",
+      "description": "General programming language constructs, paradigms, and cross-language technical vocabulary."
+    },
+    {
+      "name": "software-terms",
+      "path": "../dictionaries/software-terms.dictionary",
+      "description": "Broad software engineering terminology including architecture, design patterns, and system-level concepts."
+    }
+  ],
+  "enabled": true,
+  "enabledFileTypes": {
+    "*": true
+  },
+  "enableGlobDot": true,
+  "engines": {
+    "code-spell-checker": ">=4",
+    "cspell": ">=9"
+  },
+  "failFast": false,
+  "flagWords": [],
+  "gitignoreRoot": "${cwd}",
+  "globRoot": "${cwd}",
+  "id": "cspell-configuration",
+  "ignorePaths": [
+    "lint/**",
+    "**/__snapshots__/**",
+    "**/.cspell.json",
+    "**/.vscode/**",
+    "**/*.snap",
+    "**/.cache/**",
+    "**/.git/**",
+    "**/.gitignore",
+    "**/.next/**",
+    "**/.turbo/**",
+    "**/.vercel/**",
+    "**/*.{lock,min.js,map}",
+    "**/*.lock",
+    "**/build/**",
+    "**/coverage/**",
+    "**/dist/**",
+    "**/node_modules/**",
+    "**/package-lock.json",
+    "**/pnpm-lock.yaml",
+    "**/reports/**",
+    "**/vendor/**",
+    "**/CHANGELOG.md",
+    "**/coverage/**",
+    "**/cspell.json",
+    "**/dist.*/**",
+    "**/dist/**",
+    "**/node_modules/**",
+    "**/package-lock.json",
+    "**/package.json",
+    "**/temp/**",
+  ],
+  "ignoreRandomStrings": true,
+  "ignoreRegExpList": [],
+  "ignoreWords": [],
+  "import": [],
+  "includeRegExpList": [],
+  "language": "en",
+  "loadDefaultConfiguration": true,
+  "maxDuplicateProblems": 5,
+  "maxFileSize": 1000000,
+  "maxNumberOfProblems": 10000,
+  "minRandomLength": 40,
+  "minWordLength": 4,
+  "name": "Spell Hygiene",
+  "noConfigSearch": true,
+  "noSuggestDictionaries": [],
+  "numSuggestions": 10,
+  "overrides": [],
+  "patterns": [],
+  "pnpFiles": [
+    ".pnp.js",
+    ".pnp.cjs"
+  ],
+  "readonly": false,
+  "substitutionDefinitions": [],
+  "substitutions": [],
+  "suggestionNumChanges": 3,
+  "suggestionsTimeout": 500,
+  "suggestWords": [],
+  "unknownWords": "report-all",
+  "useGitignore": true,
+  "usePnP": false,
+  "userWords": [],
+  "validateDirectives": true,
+  "version": "0.2",
+  "vfs": {},
+  "words": []
+}

@@ -10,11 +10,14 @@ cherry-pick
 closure
 code-review
 debugging
+sourceable
 dependency-injection
 design-pattern
 diff
 encapsulation
 eslint
+secp256k1
+scannerwork
 event-loop
 factory
 formatter
