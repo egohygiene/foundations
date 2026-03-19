@@ -9,6 +9,7 @@
   "caseSensitive": false,
   "description": "Structured spell-checking configuration",
   "dictionaries": [
+    "pokemon",
     "backend-terms",
     "devops-cloud-terms",
     "frontend-terms",
@@ -98,7 +99,7 @@
   "ignoreRandomStrings": true,
   "ignoreRegExpList": [],
   "ignoreWords": [],
-  "import": [],
+  "import": ["@cspell/dict-pokemon/cspell-ext.json"],
   "includeRegExpList": [],
   "language": "en",
   "loadDefaultConfiguration": true,

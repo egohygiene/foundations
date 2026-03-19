@@ -211,4 +211,6 @@ __marimo__/
 reports
 
 # VS Code history
-.history/
+**/.history/
+
+**/node_modules/

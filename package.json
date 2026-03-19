@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@cspell/cspell-json-reporter": "^9.7.0",
+    "@cspell/dict-pokemon": "^1.0.3"
+  }
+}
