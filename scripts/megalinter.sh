@@ -49,8 +49,6 @@ fi
 # Script identity
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 readonly SCRIPT_DIR
-PROJECT_ROOT="$(pwd)"
-readonly PROJECT_ROOT
 SCRIPT_NAME="$(basename "${BASH_SOURCE[0]}")"
 readonly SCRIPT_NAME
 
@@ -904,6 +902,7 @@ run_megalinter() {
 
 setup_environment() {
   log_debug "Running setup phase"
+  log_debug "Script directory: ${SCRIPT_DIR}"
 
   # --------------------------------------------------------------------------
   # Repository context
