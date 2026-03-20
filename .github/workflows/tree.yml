@@ -1,0 +1,167 @@
+---
+# yaml-language-server: $schema=https://www.schemastore.org/github-workflow.json
+
+name: "🌳 Generate Repository Structure Reports"
+
+on:
+  push:
+    branches:
+      - "main"
+      - "master"
+
+  workflow_dispatch:
+
+concurrency:
+  group: "tree-reports-${{ github.ref }}"
+  cancel-in-progress: true
+
+permissions:
+  contents: "write"
+
+env:
+  REPOSITORY_ROOT: "${{ github.workspace }}"
+  REPORTS_DIRECTORY: "${{ github.workspace }}/reports"
+  TREE_REPORTS_DIRECTORY: "${{ github.workspace }}/reports/tree"
+
+jobs:
+  generate-repository-structure:
+    name: "🌿 Build Repository Tree Reports"
+    runs-on: "ubuntu-latest"
+
+    defaults:
+      run:
+        shell: "bash"
+
+    steps:
+      # ------------------------------------------------------------
+      # 📦 Checkout Repository
+      # ------------------------------------------------------------
+      - name: "📦 Checkout repository"
+        uses: "actions/checkout@v4"
+        with:
+          fetch-depth: 0
+
+      # ------------------------------------------------------------
+      # 🌲 Install tree CLI
+      # ------------------------------------------------------------
+      - name: "🌲 Install tree CLI utility"
+        run: |
+          set -o errexit
+          set -o nounset
+          set -o pipefail
+
+          sudo apt-get update --yes
+          sudo apt-get install --yes tree
+
+      # ------------------------------------------------------------
+      # 📁 Create Directory Structure
+      # ------------------------------------------------------------
+      - name: "📁 Create reports directory structure"
+        run: |
+          set -o errexit
+          set -o nounset
+          set -o pipefail
+
+          mkdir --parents "${TREE_REPORTS_DIRECTORY}"
+
+      # ------------------------------------------------------------
+      # 🌳 ASCII
+      # ------------------------------------------------------------
+      - name: "🌳 Generate ASCII tree report"
+        run: |
+          set -o errexit
+          set -o nounset
+          set -o pipefail
+
+          tree \
+            --all \
+            --prune \
+            --gitignore \
+            --dirsfirst \
+            --level 8 \
+            --noreport \
+            --ignore ".git" \
+            --output "${TREE_REPORTS_DIRECTORY}/repo.tree"
+
+      # ------------------------------------------------------------
+      # 🧾 JSON
+      # ------------------------------------------------------------
+      - name: "🧾 Generate JSON tree report"
+        run: |
+          set -o errexit
+          set -o nounset
+          set -o pipefail
+
+          tree \
+            --all \
+            --prune \
+            --gitignore \
+            --dirsfirst \
+            --level 8 \
+            --noreport \
+            --ignore ".git" \
+            --json \
+            --output "${TREE_REPORTS_DIRECTORY}/repo.json"
+
+      # ------------------------------------------------------------
+      # 🧬 XML
+      # ------------------------------------------------------------
+      - name: "🧬 Generate XML tree report"
+        run: |
+          set -o errexit
+          set -o nounset
+          set -o pipefail
+
+          tree \
+            --all \
+            --prune \
+            --gitignore \
+            --dirsfirst \
+            --level 8 \
+            --noreport \
+            --ignore ".git" \
+            --xml \
+            --output "${TREE_REPORTS_DIRECTORY}/repo.xml"
+
+      # ------------------------------------------------------------
+      # 🌐 HTML
+      # ------------------------------------------------------------
+      - name: "🌐 Generate HTML tree report"
+        run: |
+          set -o errexit
+          set -o nounset
+          set -o pipefail
+
+          tree \
+            --all \
+            --prune \
+            --gitignore \
+            --dirsfirst \
+            --level 8 \
+            --noreport \
+            --ignore ".git" \
+            --html \
+            --host "." \
+            --title "Repository Structure" \
+            --output "${TREE_REPORTS_DIRECTORY}/repo.html"
+
+      # ------------------------------------------------------------
+      # 💾 Commit Changes
+      # ------------------------------------------------------------
+      - name: "💾 Commit updated reports (if changed)"
+        run: |
+          set -o errexit
+          set -o nounset
+          set -o pipefail
+
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add "${TREE_REPORTS_DIRECTORY}"
+
+          if git diff --cached --quiet; then
+            printf "%s\n" "No structural changes detected."
+          else
+            git commit --message "chore(tree): update repository structure reports"
+            git push origin "HEAD:${{ github.ref_name }}"
+          fi

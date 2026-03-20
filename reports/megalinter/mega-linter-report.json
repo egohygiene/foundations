@@ -1,0 +1,295 @@
+{
+    "active_linters": [],
+    "apply_fixes": [
+        "none"
+    ],
+    "arg_input": null,
+    "arg_output": null,
+    "cli": true,
+    "default_linter_activation": false,
+    "default_rules_location": "/action/lib/.automation",
+    "disable_descriptors": [],
+    "disable_errors_linters": [],
+    "disable_linters": [
+        "REPOSITORY_DEVSKIM",
+        "JSON_ESLINT_PLUGIN_JSONC",
+        "MAKEFILE_CHECKMAKE"
+    ],
+    "enable_descriptors": [],
+    "enable_errors_linters": [],
+    "enable_linters": [
+        "ACTION_ACTIONLINT"
+    ],
+    "fail_if_updated_sources": false,
+    "file_extensions": [
+        ".yml",
+        ".yaml"
+    ],
+    "file_names_regex": [],
+    "filter_regex_exclude": "(\n  (^|/)\\.git(/|$)|\n  (^|/)\\.cache(/|$)|\n  (^|/)\\.trivycache(/|$)|\n  (^|/)node_modules(/|$)|\n  (^|/)dist(/|$)|\n  (^|/)build(/|$)|\n  (^|/)coverage(/|$)|\n  (^|/)\\.next(/|$)|\n  (^|/)\\.nuxt(/|$)|\n  (^|/)\\.turbo(/|$)|\n  (^|/)\\.pnpm(/|$)|\n  (^|/)\\.yarn(/|$)|\n  (^|/)\\.history(/|$)|\n  (^|/)target(/|$)|\n  (^|/)\\.cargo(/|$)|\n  (^|/)\\.venv(/|$)|\n  (^|/)venv(/|$)|\n  (^|/)\\.pytest_cache(/|$)|\n  (^|/)\\.mypy_cache(/|$)|\n  (^|/)\\.gradle(/|$)|\n  (^|/)\\.terraform(/|$)|\n  (^|/)\\.idea(/|$)|\n  (^|/)out(/|$)|\n  (^|/)tmp(/|$)|\n  (^|/)reports(/|$)|\n  (^|/)\\.serverless(/|$)|\n  (^|/)\\.aws-sam(/|$)|\n  (^|/)\\.dynamodb(/|$)|\n  (^|/)cmake-build(/|$)|\n  (^|/)\\.nyc_output(/|$)|\n  (^|/)\\.eslintcache(/|$)|\n  (^|/)\\.npm(/|$)|\n  (^|/)\\.fusebox(/|$)|\n  (^|/)\\.parcel-cache(/|$)|\n  (^|/)\\.output(/|$)|\n  (^|/)\\.sbom(/|$)|\n  (^|/)\\.scannerwork(/|$)|\n  (^|/)\\.vscode(/|$)|\n  \\.db$|\n  \\.sqlite$|\n  \\.tgz$|\n  \\.zip$|\n  \\.tar$|\n  \\.gz$|\n  \\.7z$|\n  \\.jar$|\n  \\.war$|\n  \\.min\\.\n)\n",
+    "filter_regex_include": null,
+    "flavor_suggestions": null,
+    "github_workspace": "/github/workspace",
+    "has_git_extraheader": false,
+    "has_updated_sources": 0,
+    "ignore_generated_files": true,
+    "ignore_gitignore_files": true,
+    "linter_rules_path": "/github/workspace/lint",
+    "linter_version_only": null,
+    "linters": [
+        {
+            "activation_rules": [],
+            "active_only_if_file_found": [],
+            "apply_fixes": false,
+            "can_output_sarif": false,
+            "cli_command_remove_args": [],
+            "cli_config_arg_name": "-config-file",
+            "cli_config_default_value": null,
+            "cli_config_extra_args": [],
+            "cli_docker_args": [],
+            "cli_docker_image": null,
+            "cli_docker_image_version": "latest",
+            "cli_executable": [
+                "actionlint"
+            ],
+            "cli_executable_fix": [
+                "actionlint"
+            ],
+            "cli_executable_help": [
+                "actionlint"
+            ],
+            "cli_executable_version": [
+                "actionlint"
+            ],
+            "cli_help_arg_name": "-h",
+            "cli_help_extra_args": [],
+            "cli_help_extra_commands": [],
+            "cli_lint_errors_count": "regex_count",
+            "cli_lint_errors_regex": "([0-9]+) \\|",
+            "cli_lint_extra_args": [],
+            "cli_lint_extra_args_after": [],
+            "cli_lint_fix_arg_name": null,
+            "cli_lint_fix_remove_args": [],
+            "cli_lint_ignore_arg_name": null,
+            "cli_lint_mode": "project",
+            "cli_lint_user_args": [],
+            "cli_lint_warnings_count": null,
+            "cli_lint_warnings_regex": null,
+            "cli_sarif_args": [],
+            "cli_version_arg_name": "-version",
+            "cli_version_extra_args": [],
+            "config_file": "/github/workspace/lint/actions/actionlint.yml",
+            "config_file_error": null,
+            "config_file_label": "/github/workspace/lint/actions/actionlint.yml",
+            "config_file_name": "lint/actions/actionlint.yml",
+            "default_rules_location": "/action/lib/.automation",
+            "descriptor_flavors": [
+                "all_flavors",
+                "cupcake"
+            ],
+            "descriptor_id": "ACTION",
+            "descriptor_type": "tooling_format",
+            "disable_errors": false,
+            "disable_errors_if_less_than": null,
+            "disabled": false,
+            "disabled_reason": null,
+            "elapsed_time_s": 0,
+            "examples": [
+                "actionlint /path/to/workflow1.yml /path/to/workflow2.yaml"
+            ],
+            "file_contains_regex": [],
+            "file_contains_regex_extensions": [],
+            "file_extensions": [
+                ".yml",
+                ".yaml"
+            ],
+            "file_names_not_ends_with": [],
+            "file_names_regex": [],
+            "files": [],
+            "files_lint_results": [],
+            "files_number": 0,
+            "files_sub_directory": ".github/workflows",
+            "filter_regex_exclude_descriptor": null,
+            "filter_regex_exclude_linter": null,
+            "filter_regex_include": null,
+            "final_config_file": null,
+            "final_ignore_file": null,
+            "github_api_url": null,
+            "github_workspace": "/github/workspace",
+            "help_command_return_code": 0,
+            "ignore_file": null,
+            "ignore_file_error": null,
+            "ignore_file_label": null,
+            "ignore_file_name": null,
+            "ignore_for_flavor_suggestions": false,
+            "install": {
+                "apk": [
+                    "py3-pyflakes"
+                ],
+                "dockerfile": [
+                    "# renovate: datasource=docker depName=rhysd/actionlint\nARG ACTION_ACTIONLINT_VERSION=1.7.11",
+                    "# renovate: datasource=docker depName=koalaman/shellcheck\nARG BASH_SHELLCHECK_VERSION=v0.11.0",
+                    "FROM rhysd/actionlint:${ACTION_ACTIONLINT_VERSION} AS actionlint\n# shellcheck is a dependency for actionlint",
+                    "FROM koalaman/shellcheck:${BASH_SHELLCHECK_VERSION} AS shellcheck",
+                    "COPY --link --from=actionlint /usr/local/bin/actionlint /usr/bin/actionlint\n# shellcheck is a dependency for actionlint",
+                    "COPY --link --from=shellcheck /bin/shellcheck /usr/bin/shellcheck"
+                ]
+            },
+            "is_active": false,
+            "is_formatter": false,
+            "is_plugin": false,
+            "is_sbom": false,
+            "lint_all_files": false,
+            "lint_all_other_linters_files": false,
+            "lint_command_log": [],
+            "lint_cwd_log": "",
+            "linter_help_cache": null,
+            "linter_icon_png_url": null,
+            "linter_name": "actionlint",
+            "linter_repo": "https://github.com/rhysd/actionlint",
+            "linter_rules_configuration_url": "https://github.com/rhysd/actionlint/blob/main/docs/config.md",
+            "linter_rules_path": "/github/workspace/lint",
+            "linter_spdx_license": "MIT",
+            "linter_speed": 3,
+            "linter_text": "**actionlint** is a static checker for GitHub Actions workflow files that helps you catch errors and improve workflow quality before they cause issues in your CI/CD pipelines.\n\n**Key Features:**\n\n- **Comprehensive Syntax Validation**: Checks workflow files against GitHub Actions syntax requirements and catches unexpected or missing keys\n- **Strong Type Checking**: Validates `${{ }}` expressions with semantic analysis to detect type mismatches and access to non-existing properties\n- **Actions Usage Verification**: Validates inputs at `with:` and outputs in `steps.{id}.outputs` are correct for specific action versions\n- **Security Analysis**: Detects script injection vulnerabilities, hard-coded credentials, and untrusted input usage patterns\n- **Tool Integration**: Built-in shellcheck and pyflakes integration for validating scripts in `run:` steps\n- **Reusable Workflow Support**: Validates inputs, outputs, and secrets for reusable workflows and workflow calls\n- **Advanced Validations**: Includes glob syntax validation, dependency checks for `needs:`, runner label validation, and cron syntax validation\n",
+            "linter_url": "https://rhysd.github.io/actionlint/",
+            "linter_version_cache": null,
+            "llm_suggestion": null,
+            "log_lines_post": [],
+            "log_lines_pre": [],
+            "master": null,
+            "name": "ACTION_ACTIONLINT",
+            "no_config_if_fix": false,
+            "number_errors": 0,
+            "number_fixed": 0,
+            "output_sarif": false,
+            "post_commands": null,
+            "post_linter_status": true,
+            "pre_commands": null,
+            "processing_order": 0,
+            "remote_config_file_to_delete": null,
+            "remote_ignore_file_to_delete": null,
+            "report_folder": "reports/megalinter",
+            "report_types": [],
+            "reporters": [
+                {
+                    "is_active": true,
+                    "master": "<megalinter.Linter.Linter object at 0x7ffff3e1d090>",
+                    "processing_order": 0,
+                    "report_folder": "reports/megalinter",
+                    "report_items": "[]",
+                    "report_type": "simple"
+                },
+                {
+                    "is_active": true,
+                    "master": "<megalinter.Linter.Linter object at 0x7ffff3e1d090>",
+                    "processing_order": 0,
+                    "report_folder": "reports/megalinter",
+                    "report_items": "[]",
+                    "report_type": "simple"
+                },
+                {
+                    "is_active": true,
+                    "master": "<megalinter.Linter.Linter object at 0x7ffff3e1d090>",
+                    "processing_order": 0,
+                    "report_folder": "reports/megalinter",
+                    "report_items": "[]"
+                }
+            ],
+            "request_id": "054d4a64-24a6-11f1-b01d-ae461e19fd38",
+            "return_code": 0,
+            "sarif_default_output_file": null,
+            "sarif_output_file": null,
+            "show_elapsed_time": true,
+            "start_perf": null,
+            "status": "success",
+            "stdout": null,
+            "stdout_human": null,
+            "supported_platforms": {
+                "platform": [
+                    "linux/amd64",
+                    "linux/arm64"
+                ]
+            },
+            "test_folder": "action",
+            "test_format_fix_file_extensions": [],
+            "test_format_fix_regex_exclude": null,
+            "test_variables": {},
+            "total_number_errors": 0,
+            "total_number_warnings": 0,
+            "try_fix": false,
+            "unsecured_env_variables": [],
+            "version_command_return_code": 0,
+            "version_extract_regex": "\\d+(\\.\\d+)+",
+            "workspace": "/github/workspace"
+        }
+    ],
+    "megalinter_flavor": "all",
+    "output_sarif": false,
+    "post_commands_results": [],
+    "pre_commands_results": [
+        {
+            "command_info": {
+                "command": "echo \"Calling pre-commands from $(pwd)\"",
+                "cwd": "root",
+                "secured_env": true
+            },
+            "status": 0,
+            "stdout": "Calling pre-commands from /github/workspace\n"
+        }
+    ],
+    "report_folder": "reports/megalinter",
+    "reporters": [
+        {
+            "is_active": true,
+            "master": null,
+            "processing_order": 0,
+            "report_folder": "reports/megalinter",
+            "report_items": []
+        },
+        {
+            "is_active": true,
+            "master": null,
+            "processing_order": 0,
+            "report_folder": "reports/megalinter",
+            "report_items": []
+        },
+        {
+            "is_active": true,
+            "master": null,
+            "processing_order": 0,
+            "report_folder": "reports/megalinter",
+            "report_items": []
+        },
+        {
+            "is_active": true,
+            "master": null,
+            "processing_order": 0,
+            "report_folder": "reports/megalinter",
+            "report_items": []
+        },
+        {
+            "is_active": true,
+            "master": null,
+            "processing_order": 0,
+            "report_folder": "reports/megalinter",
+            "report_items": []
+        },
+        {
+            "is_active": true,
+            "master": null,
+            "processing_order": 0,
+            "report_folder": "reports/megalinter",
+            "report_items": [],
+            "report_type": "detailed"
+        }
+    ],
+    "request_id": "054d4a64-24a6-11f1-b01d-ae461e19fd38",
+    "result_message": "",
+    "return_code": 0,
+    "sarif_to_human": true,
+    "show_elapsed_time": true,
+    "status": "success",
+    "validate_all_code_base": true,
+    "workspace": "/github/workspace"
+}
