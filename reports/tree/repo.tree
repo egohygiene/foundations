@@ -1,0 +1,225 @@
+.
+├── .github
+│   └── workflows
+│       └── tree.yml
+├── .vscode
+│   └── cspell.json
+├── lint
+│   ├── actions
+│   │   └── actionlint.yml
+│   ├── ansible
+│   │   └── ansible-lint.yml
+│   ├── api
+│   │   └── .spectral.yaml
+│   ├── arm
+│   │   └── .arm-ttk.psd1
+│   ├── clojure
+│   │   ├── .clj-kondo
+│   │   │   └── config.edn
+│   │   └── .cljstyle
+│   ├── cloudformation
+│   │   └── .cfnlintrc.yml
+│   ├── coffee
+│   │   └── .coffee-lint.json
+│   ├── commits
+│   │   └── .commitlint.config.cjs
+│   ├── copypaste
+│   │   └── .jscpd.json
+│   ├── cpp
+│   │   └── .clang-format
+│   ├── css
+│   │   └── .stylelintrc.json
+│   ├── dart
+│   │   └── analysis_options.yml
+│   ├── dockerfile
+│   │   └── .hadolint.yaml
+│   ├── editorconfig
+│   │   ├── .ecrc
+│   │   └── .editorconfig-checker.json
+│   ├── gherkin
+│   │   └── .gherkin-lintrc
+│   ├── go
+│   │   ├── .golangci.yml
+│   │   └── .revive.toml
+│   ├── graphql
+│   │   └── .graphql-schema-linter.yml
+│   ├── groovy
+│   │   └── .groovylintrc.json
+│   ├── html
+│   │   └── .htmlhintrc
+│   ├── java
+│   │   ├── java-pmd-ruleset.xml
+│   │   └── sun_checks.xml
+│   ├── javascript
+│   │   ├── .eslintrc-json.json
+│   │   ├── .prettier.config.mjs
+│   │   └── eslint.config.mjs
+│   ├── json
+│   │   ├── .jsonlintrc
+│   │   └── .npmpackagejsonlintrc.json
+│   ├── latex
+│   │   └── .chktexrc
+│   ├── lua
+│   │   └── .luacheckrc
+│   ├── makefile
+│   │   └── .checkmake.ini
+│   ├── markdown
+│   │   ├── .markdown-link-check.json
+│   │   ├── .markdownlint.json
+│   │   └── .remarkrc.json
+│   ├── php
+│   │   ├── .phplint.yml
+│   │   ├── phpcs.xml
+│   │   ├── phpstan.neon.dist
+│   │   └── psalm.xml
+│   ├── powershell
+│   │   ├── .powershell-formatter.psd1
+│   │   └── .powershell-psscriptanalyzer.psd1
+│   ├── prose
+│   │   ├── dictionaries
+│   │   │   ├── backend-terms.dictionary
+│   │   │   ├── devops-cloud-terms.dictionary
+│   │   │   ├── frontend-terms.dictionary
+│   │   │   ├── programming-terms.dictionary
+│   │   │   ├── project-words.dictionary
+│   │   │   └── software-terms.dictionary
+│   │   ├── spell
+│   │   │   ├── .lycheeignore
+│   │   │   ├── cspell.json
+│   │   │   ├── cspell.megalinter.json
+│   │   │   └── lychee.toml
+│   │   ├── styles
+│   │   │   ├── proselint
+│   │   │   │   ├── Airlinese.yml
+│   │   │   │   ├── AnimalLabels.yml
+│   │   │   │   ├── Annotations.yml
+│   │   │   │   ├── Apologizing.yml
+│   │   │   │   ├── Archaisms.yml
+│   │   │   │   ├── But.yml
+│   │   │   │   ├── Cliches.yml
+│   │   │   │   ├── CorporateSpeak.yml
+│   │   │   │   ├── Currency.yml
+│   │   │   │   ├── Cursing.yml
+│   │   │   │   ├── DateCase.yml
+│   │   │   │   ├── DateMidnight.yml
+│   │   │   │   ├── DateRedundancy.yml
+│   │   │   │   ├── DateSpacing.yml
+│   │   │   │   ├── DenizenLabels.yml
+│   │   │   │   ├── Diacritical.yml
+│   │   │   │   ├── GenderBias.yml
+│   │   │   │   ├── GroupTerms.yml
+│   │   │   │   ├── Hedging.yml
+│   │   │   │   ├── Hyperbole.yml
+│   │   │   │   ├── Jargon.yml
+│   │   │   │   ├── LGBTOffensive.yml
+│   │   │   │   ├── LGBTTerms.yml
+│   │   │   │   ├── Malapropisms.yml
+│   │   │   │   ├── Needless.yml
+│   │   │   │   ├── Nonwords.yml
+│   │   │   │   ├── Oxymorons.yml
+│   │   │   │   ├── P-Value.yml
+│   │   │   │   ├── RASSyndrome.yml
+│   │   │   │   ├── README.md
+│   │   │   │   ├── Skunked.yml
+│   │   │   │   ├── Spelling.yml
+│   │   │   │   ├── Typography.yml
+│   │   │   │   ├── Uncomparables.yml
+│   │   │   │   ├── Very.yml
+│   │   │   │   └── meta.json
+│   │   │   └── write-good
+│   │   │       ├── Cliches.yml
+│   │   │       ├── E-Prime.yml
+│   │   │       ├── Illusions.yml
+│   │   │       ├── Passive.yml
+│   │   │       ├── README.md
+│   │   │       ├── So.yml
+│   │   │       ├── ThereIs.yml
+│   │   │       ├── TooWordy.yml
+│   │   │       ├── Weasel.yml
+│   │   │       └── meta.json
+│   │   ├── .proselintrc
+│   │   └── .vale.ini
+│   ├── protobuf
+│   │   └── .protolintrc.yml
+│   ├── puppet
+│   │   └── .puppet-lint.rc
+│   ├── python
+│   │   ├── .bandit.yml
+│   │   ├── .isort.cfg
+│   │   ├── .mypy.ini
+│   │   ├── .pylintrc
+│   │   ├── .ruff.toml
+│   │   ├── flake8
+│   │   └── pyrightconfig.json
+│   ├── r
+│   │   └── .lintr
+│   ├── raku
+│   │   └── META6.json
+│   ├── repo
+│   │   └── .ls-lint.yml
+│   ├── rst
+│   │   └── .rstcheck.cfg
+│   ├── ruby
+│   │   └── .ruby-lint.yml
+│   ├── rust
+│   │   └── .clippy.toml
+│   ├── salesforce
+│   │   ├── .flow-scanner.json
+│   │   └── apex-pmd-ruleset.xml
+│   ├── scala
+│   │   └── .scalafix.conf
+│   ├── security
+│   │   ├── lynis
+│   │   │   └── custom.prf
+│   │   ├── .checkov.yml
+│   │   ├── .devskim.json
+│   │   ├── .gitleaks.toml
+│   │   ├── .grype.yaml
+│   │   ├── .kics.config.json
+│   │   ├── .secretlintignore
+│   │   ├── .secretlintrc.json
+│   │   ├── .syft.yaml
+│   │   ├── .trufflehog.yml
+│   │   ├── .trufflehogignore
+│   │   ├── trivy-sbom.yaml
+│   │   └── trivy.yaml
+│   ├── snakemake
+│   │   └── .snakefmt.toml
+│   ├── sql
+│   │   ├── .sqlfluff
+│   │   └── .tsqllintrc.json
+│   ├── swift
+│   │   └── .swiftlint.yml
+│   ├── system
+│   │   ├── apt.conf
+│   │   └── dpkg.cfg
+│   ├── tekton
+│   │   └── .tektonlintrc.yaml
+│   ├── terraform
+│   │   ├── .tflint.hcl
+│   │   ├── terragrunt.hcl
+│   │   └── terrascan-config.toml
+│   └── yaml
+│       ├── .v8rrc.yml
+│       └── .yamllint.yml
+├── reports
+│   ├── megalinter
+│   │   ├── updated_sources
+│   │   │   └── .megalinter.yml
+│   │   ├── IDE-config.txt
+│   │   ├── SUMMARY.md
+│   │   └── mega-linter-report.json
+│   └── tree
+│       └── repo.tree
+├── scripts
+│   └── megalinter.sh
+├── tests
+│   └── git_helpers.bats
+├── .codespellrc
+├── .gitignore
+├── .megalinter.yml
+├── LICENSE
+├── README.md
+├── foundations.code-workspace
+├── package-lock.json
+└── package.json

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tree>
+  <directory name=".">
+    <directory name=".github">
+      <directory name="workflows">
+        <file name="tree.yml"></file>
+      </directory>
+    </directory>
+    <directory name=".vscode">
+      <file name="cspell.json"></file>
+    </directory>
+    <directory name="lint">
+      <directory name="actions">
+        <file name="actionlint.yml"></file>
+      </directory>
+      <directory name="ansible">
+        <file name="ansible-lint.yml"></file>
+      </directory>
+      <directory name="api">
+        <file name=".spectral.yaml"></file>
+      </directory>
+      <directory name="arm">
+        <file name=".arm-ttk.psd1"></file>
+      </directory>
+      <directory name="clojure">
+        <directory name=".clj-kondo">
+          <file name="config.edn"></file>
+        </directory>
+        <file name=".cljstyle"></file>
+      </directory>
+      <directory name="cloudformation">
+        <file name=".cfnlintrc.yml"></file>
+      </directory>
+      <directory name="coffee">
+        <file name=".coffee-lint.json"></file>
+      </directory>
+      <directory name="commits">
+        <file name=".commitlint.config.cjs"></file>
+      </directory>
+      <directory name="copypaste">
+        <file name=".jscpd.json"></file>
+      </directory>
+      <directory name="cpp">
+        <file name=".clang-format"></file>
+      </directory>
+      <directory name="css">
+        <file name=".stylelintrc.json"></file>
+      </directory>
+      <directory name="dart">
+        <file name="analysis_options.yml"></file>
+      </directory>
+      <directory name="dockerfile">
+        <file name=".hadolint.yaml"></file>
+      </directory>
+      <directory name="editorconfig">
+        <file name=".ecrc"></file>
+        <file name=".editorconfig-checker.json"></file>
+      </directory>
+      <directory name="gherkin">
+        <file name=".gherkin-lintrc"></file>
+      </directory>
+      <directory name="go">
+        <file name=".golangci.yml"></file>
+        <file name=".revive.toml"></file>
+      </directory>
+      <directory name="graphql">
+        <file name=".graphql-schema-linter.yml"></file>
+      </directory>
+      <directory name="groovy">
+        <file name=".groovylintrc.json"></file>
+      </directory>
+      <directory name="html">
+        <file name=".htmlhintrc"></file>
+      </directory>
+      <directory name="java">
+        <file name="java-pmd-ruleset.xml"></file>
+        <file name="sun_checks.xml"></file>
+      </directory>
+      <directory name="javascript">
+        <file name=".eslintrc-json.json"></file>
+        <file name=".prettier.config.mjs"></file>
+        <file name="eslint.config.mjs"></file>
+      </directory>
+      <directory name="json">
+        <file name=".jsonlintrc"></file>
+        <file name=".npmpackagejsonlintrc.json"></file>
+      </directory>
+      <directory name="latex">
+        <file name=".chktexrc"></file>
+      </directory>
+      <directory name="lua">
+        <file name=".luacheckrc"></file>
+      </directory>
+      <directory name="makefile">
+        <file name=".checkmake.ini"></file>
+      </directory>
+      <directory name="markdown">
+        <file name=".markdown-link-check.json"></file>
+        <file name=".markdownlint.json"></file>
+        <file name=".remarkrc.json"></file>
+      </directory>
+      <directory name="php">
+        <file name=".phplint.yml"></file>
+        <file name="phpcs.xml"></file>
+        <file name="phpstan.neon.dist"></file>
+        <file name="psalm.xml"></file>
+      </directory>
+      <directory name="powershell">
+        <file name=".powershell-formatter.psd1"></file>
+        <file name=".powershell-psscriptanalyzer.psd1"></file>
+      </directory>
+      <directory name="prose">
+        <directory name="dictionaries">
+          <file name="backend-terms.dictionary"></file>
+          <file name="devops-cloud-terms.dictionary"></file>
+          <file name="frontend-terms.dictionary"></file>
+          <file name="programming-terms.dictionary"></file>
+          <file name="project-words.dictionary"></file>
+          <file name="software-terms.dictionary"></file>
+        </directory>
+        <directory name="spell">
+          <file name=".lycheeignore"></file>
+          <file name="cspell.json"></file>
+          <file name="cspell.megalinter.json"></file>
+          <file name="lychee.toml"></file>
+        </directory>
+        <directory name="styles">
+          <directory name="proselint">
+            <file name="Airlinese.yml"></file>
+            <file name="AnimalLabels.yml"></file>
+            <file name="Annotations.yml"></file>
+            <file name="Apologizing.yml"></file>
+            <file name="Archaisms.yml"></file>
+            <file name="But.yml"></file>
+            <file name="Cliches.yml"></file>
+            <file name="CorporateSpeak.yml"></file>
+            <file name="Currency.yml"></file>
+            <file name="Cursing.yml"></file>
+            <file name="DateCase.yml"></file>
+            <file name="DateMidnight.yml"></file>
+            <file name="DateRedundancy.yml"></file>
+            <file name="DateSpacing.yml"></file>
+            <file name="DenizenLabels.yml"></file>
+            <file name="Diacritical.yml"></file>
+            <file name="GenderBias.yml"></file>
+            <file name="GroupTerms.yml"></file>
+            <file name="Hedging.yml"></file>
+            <file name="Hyperbole.yml"></file>
+            <file name="Jargon.yml"></file>
+            <file name="LGBTOffensive.yml"></file>
+            <file name="LGBTTerms.yml"></file>
+            <file name="Malapropisms.yml"></file>
+            <file name="Needless.yml"></file>
+            <file name="Nonwords.yml"></file>
+            <file name="Oxymorons.yml"></file>
+            <file name="P-Value.yml"></file>
+            <file name="RASSyndrome.yml"></file>
+            <file name="README.md"></file>
+            <file name="Skunked.yml"></file>
+            <file name="Spelling.yml"></file>
+            <file name="Typography.yml"></file>
+            <file name="Uncomparables.yml"></file>
+            <file name="Very.yml"></file>
+            <file name="meta.json"></file>
+          </directory>
+          <directory name="write-good">
+            <file name="Cliches.yml"></file>
+            <file name="E-Prime.yml"></file>
+            <file name="Illusions.yml"></file>
+            <file name="Passive.yml"></file>
+            <file name="README.md"></file>
+            <file name="So.yml"></file>
+            <file name="ThereIs.yml"></file>
+            <file name="TooWordy.yml"></file>
+            <file name="Weasel.yml"></file>
+            <file name="meta.json"></file>
+          </directory>
+        </directory>
+        <file name=".proselintrc"></file>
+        <file name=".vale.ini"></file>
+      </directory>
+      <directory name="protobuf">
+        <file name=".protolintrc.yml"></file>
+      </directory>
+      <directory name="puppet">
+        <file name=".puppet-lint.rc"></file>
+      </directory>
+      <directory name="python">
+        <file name=".bandit.yml"></file>
+        <file name=".isort.cfg"></file>
+        <file name=".mypy.ini"></file>
+        <file name=".pylintrc"></file>
+        <file name=".ruff.toml"></file>
+        <file name="flake8"></file>
+        <file name="pyrightconfig.json"></file>
+      </directory>
+      <directory name="r">
+        <file name=".lintr"></file>
+      </directory>
+      <directory name="raku">
+        <file name="META6.json"></file>
+      </directory>
+      <directory name="repo">
+        <file name=".ls-lint.yml"></file>
+      </directory>
+      <directory name="rst">
+        <file name=".rstcheck.cfg"></file>
+      </directory>
+      <directory name="ruby">
+        <file name=".ruby-lint.yml"></file>
+      </directory>
+      <directory name="rust">
+        <file name=".clippy.toml"></file>
+      </directory>
+      <directory name="salesforce">
+        <file name=".flow-scanner.json"></file>
+        <file name="apex-pmd-ruleset.xml"></file>
+      </directory>
+      <directory name="scala">
+        <file name=".scalafix.conf"></file>
+      </directory>
+      <directory name="security">
+        <directory name="lynis">
+          <file name="custom.prf"></file>
+        </directory>
+        <file name=".checkov.yml"></file>
+        <file name=".devskim.json"></file>
+        <file name=".gitleaks.toml"></file>
+        <file name=".grype.yaml"></file>
+        <file name=".kics.config.json"></file>
+        <file name=".secretlintignore"></file>
+        <file name=".secretlintrc.json"></file>
+        <file name=".syft.yaml"></file>
+        <file name=".trufflehog.yml"></file>
+        <file name=".trufflehogignore"></file>
+        <file name="trivy-sbom.yaml"></file>
+        <file name="trivy.yaml"></file>
+      </directory>
+      <directory name="snakemake">
+        <file name=".snakefmt.toml"></file>
+      </directory>
+      <directory name="sql">
+        <file name=".sqlfluff"></file>
+        <file name=".tsqllintrc.json"></file>
+      </directory>
+      <directory name="swift">
+        <file name=".swiftlint.yml"></file>
+      </directory>
+      <directory name="system">
+        <file name="apt.conf"></file>
+        <file name="dpkg.cfg"></file>
+      </directory>
+      <directory name="tekton">
+        <file name=".tektonlintrc.yaml"></file>
+      </directory>
+      <directory name="terraform">
+        <file name=".tflint.hcl"></file>
+        <file name="terragrunt.hcl"></file>
+        <file name="terrascan-config.toml"></file>
+      </directory>
+      <directory name="yaml">
+        <file name=".v8rrc.yml"></file>
+        <file name=".yamllint.yml"></file>
+      </directory>
+    </directory>
+    <directory name="reports">
+      <directory name="megalinter">
+        <directory name="updated_sources">
+          <file name=".megalinter.yml"></file>
+        </directory>
+        <file name="IDE-config.txt"></file>
+        <file name="SUMMARY.md"></file>
+        <file name="mega-linter-report.json"></file>
+      </directory>
+      <directory name="tree">
+        <file name="repo.json"></file>
+        <file name="repo.tree"></file>
+        <file name="repo.xml"></file>
+      </directory>
+    </directory>
+    <directory name="scripts">
+      <file name="megalinter.sh"></file>
+    </directory>
+    <directory name="tests">
+      <file name="git_helpers.bats"></file>
+    </directory>
+    <file name=".codespellrc"></file>
+    <file name=".gitignore"></file>
+    <file name=".megalinter.yml"></file>
+    <file name="LICENSE"></file>
+    <file name="README.md"></file>
+    <file name="foundations.code-workspace"></file>
+    <file name="package-lock.json"></file>
+    <file name="package.json"></file>
+  </directory>
+</tree>
