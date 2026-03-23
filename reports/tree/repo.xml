@@ -2,8 +2,12 @@
 <tree>
   <directory name=".">
     <directory name=".github">
+      <directory name="scripts">
+        <file name="vitality.rb"></file>
+      </directory>
       <directory name="workflows">
         <file name="tree.yml"></file>
+        <file name="vitality.yml"></file>
       </directory>
     </directory>
     <directory name=".vscode">
@@ -265,14 +269,27 @@
     </directory>
     <directory name="reports">
       <directory name="megalinter">
+        <directory name="IDE-config">
+          <file name="actionlint.yml"></file>
+        </directory>
         <directory name="updated_sources">
-          <file name=".megalinter.yml"></file>
+          <directory name="lint">
+            <directory name="ruby">
+              <file name=".ruby-lint.yml"></file>
+            </directory>
+          </directory>
+          <directory name="reports">
+            <directory name="megalinter">
+              <file name="SUMMARY.md"></file>
+            </directory>
+          </directory>
         </directory>
         <file name="IDE-config.txt"></file>
         <file name="SUMMARY.md"></file>
         <file name="mega-linter-report.json"></file>
       </directory>
       <directory name="tree">
+        <file name="repo.html"></file>
         <file name="repo.json"></file>
         <file name="repo.tree"></file>
         <file name="repo.xml"></file>

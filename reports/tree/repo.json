@@ -1,8 +1,12 @@
 [
   {"type":"directory","name":".","contents":[
     {"type":"directory","name":".github","contents":[
+      {"type":"directory","name":"scripts","contents":[
+        {"type":"file","name":"vitality.rb"}
+      ]},
       {"type":"directory","name":"workflows","contents":[
-        {"type":"file","name":"tree.yml"}
+        {"type":"file","name":"tree.yml"},
+        {"type":"file","name":"vitality.yml"}
       ]}
     ]},
     {"type":"directory","name":".vscode","contents":[
@@ -264,16 +268,30 @@
     ]},
     {"type":"directory","name":"reports","contents":[
       {"type":"directory","name":"megalinter","contents":[
+        {"type":"directory","name":"IDE-config","contents":[
+          {"type":"file","name":"actionlint.yml"}
+        ]},
         {"type":"directory","name":"updated_sources","contents":[
-          {"type":"file","name":".megalinter.yml"}
+          {"type":"directory","name":"lint","contents":[
+            {"type":"directory","name":"ruby","contents":[
+              {"type":"file","name":".ruby-lint.yml"}
+            ]}
+          ]},
+          {"type":"directory","name":"reports","contents":[
+            {"type":"directory","name":"megalinter","contents":[
+              {"type":"file","name":"SUMMARY.md"}
+            ]}
+          ]}
         ]},
         {"type":"file","name":"IDE-config.txt"},
         {"type":"file","name":"SUMMARY.md"},
         {"type":"file","name":"mega-linter-report.json"}
       ]},
       {"type":"directory","name":"tree","contents":[
+        {"type":"file","name":"repo.html"},
         {"type":"file","name":"repo.json"},
-        {"type":"file","name":"repo.tree"}
+        {"type":"file","name":"repo.tree"},
+        {"type":"file","name":"repo.xml"}
       ]}
     ]},
     {"type":"directory","name":"scripts","contents":[

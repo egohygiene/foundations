@@ -27,8 +27,11 @@
 	<h1>Repository Structure</h1><p>
 	<a href="./">.</a><br>
 	├── <a href="./.github/">.github</a><br>
+	│   ├── <a href="./.github/scripts/">scripts</a><br>
+	│   │   └── <a href="./.github/scripts/vitality.rb">vitality.rb</a><br>
 	│   └── <a href="./.github/workflows/">workflows</a><br>
-	│   &nbsp;&nbsp;&nbsp; └── <a href="./.github/workflows/tree.yml">tree.yml</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="./.github/workflows/tree.yml">tree.yml</a><br>
+	│   &nbsp;&nbsp;&nbsp; └── <a href="./.github/workflows/vitality.yml">vitality.yml</a><br>
 	├── <a href="./.vscode/">.vscode</a><br>
 	│   └── <a href="./.vscode/cspell.json">cspell.json</a><br>
 	├── <a href="./lint/">lint</a><br>
@@ -231,8 +234,15 @@
 	│   &nbsp;&nbsp;&nbsp; └── <a href="./lint/yaml/.yamllint.yml">.yamllint.yml</a><br>
 	├── <a href="./reports/">reports</a><br>
 	│   ├── <a href="./reports/megalinter/">megalinter</a><br>
+	│   │   ├── <a href="./reports/megalinter/IDE-config/">IDE-config</a><br>
+	│   │   │   └── <a href="./reports/megalinter/IDE-config/actionlint.yml">actionlint.yml</a><br>
 	│   │   ├── <a href="./reports/megalinter/updated_sources/">updated_sources</a><br>
-	│   │   │   └── <a href="./reports/megalinter/updated_sources/.megalinter.yml">.megalinter.yml</a><br>
+	│   │   │   ├── <a href="./reports/megalinter/updated_sources/lint/">lint</a><br>
+	│   │   │   │   └── <a href="./reports/megalinter/updated_sources/lint/ruby/">ruby</a><br>
+	│   │   │   │   &nbsp;&nbsp;&nbsp; └── <a href="./reports/megalinter/updated_sources/lint/ruby/.ruby-lint.yml">.ruby-lint.yml</a><br>
+	│   │   │   └── <a href="./reports/megalinter/updated_sources/reports/">reports</a><br>
+	│   │   │   &nbsp;&nbsp;&nbsp; └── <a href="./reports/megalinter/updated_sources/reports/megalinter/">megalinter</a><br>
+	│   │   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <a href="./reports/megalinter/updated_sources/reports/megalinter/SUMMARY.md">SUMMARY.md</a><br>
 	│   │   ├── <a href="./reports/megalinter/IDE-config.txt">IDE-config.txt</a><br>
 	│   │   ├── <a href="./reports/megalinter/SUMMARY.md">SUMMARY.md</a><br>
 	│   │   └── <a href="./reports/megalinter/mega-linter-report.json">mega-linter-report.json</a><br>

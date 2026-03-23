@@ -1,7 +1,10 @@
 .
 ├── .github
+│   ├── scripts
+│   │   └── vitality.rb
 │   └── workflows
-│       └── tree.yml
+│       ├── tree.yml
+│       └── vitality.yml
 ├── .vscode
 │   └── cspell.json
 ├── lint
@@ -204,13 +207,23 @@
 │       └── .yamllint.yml
 ├── reports
 │   ├── megalinter
+│   │   ├── IDE-config
+│   │   │   └── actionlint.yml
 │   │   ├── updated_sources
-│   │   │   └── .megalinter.yml
+│   │   │   ├── lint
+│   │   │   │   └── ruby
+│   │   │   │       └── .ruby-lint.yml
+│   │   │   └── reports
+│   │   │       └── megalinter
+│   │   │           └── SUMMARY.md
 │   │   ├── IDE-config.txt
 │   │   ├── SUMMARY.md
 │   │   └── mega-linter-report.json
 │   └── tree
-│       └── repo.tree
+│       ├── repo.html
+│       ├── repo.json
+│       ├── repo.tree
+│       └── repo.xml
 ├── scripts
 │   └── megalinter.sh
 ├── tests
