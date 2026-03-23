@@ -1,0 +1,32 @@
+---
+# yaml-language-server: $schema=https://www.schemastore.org/github-workflow.json
+
+name: "🩺 Project Vitality Audit"
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    name: "Ruby Vitality Check"
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: "📥 Checkout Repository"
+        uses: actions/checkout@v4
+
+      - name: "💎 Setup Ruby"
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '4.0' # Specify the Ruby version you want to use
+          bundler-cache: false # No Gemfile needed for this script
+
+      - name: "🔍 Run Vitality Script"
+        run: ruby .github/scripts/vitality.rb
