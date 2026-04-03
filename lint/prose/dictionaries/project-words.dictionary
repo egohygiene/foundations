@@ -1,4 +1,6 @@
-
+# Project-Specific Vocabulary
+# Primary writable project dictionary for custom words, names, tools, environment variables,
+# and domain-specific terminology unique to this repository and its ecosystem.
 abook
 abookrc
 ackrc
@@ -9,7 +11,6 @@ adminpassword
 aerospike
 aidecheck
 aideinit
-codespell
 ALIBUILD
 ALTUSERXSESSION
 anki
@@ -56,6 +57,7 @@ clippy
 cljstyle
 CLOUDSDK
 CocoaPods
+codespell
 codetotal
 codezombiech
 coffeelint
@@ -66,6 +68,7 @@ confdef
 CONFDIR
 CONFIGDIR
 conkyrc
+connrefused
 containerd
 cookiecutter
 coolbear
@@ -86,7 +89,12 @@ DARTANALYZER
 dbaeumer
 dbname
 DBUILD
+DBUILD_PLUGIN_MBIO
+DBUILD_PLUGIN_NITF
+DBUILD_PLUGIN_PGPOINTCLOUD
 DCMAKE
+DCMAKE_BUILD_RPATH
+DCMAKE_INSTALL_RPATH
 DEBCONF
 debtree
 Devbox
@@ -111,9 +119,11 @@ dotenv
 dpage
 dpkg
 dvdcss
+DWITH_LASZIP
+DWITH_LAZPERF
+DWITH_ZSTD
 EasyOCR
 ecrc
-Eeuo
 egohygiene
 ehthumbs
 ELECTRUMDIR
@@ -143,8 +153,10 @@ frontmatter
 functrace
 Ganepola
 gdal
+gdalinfo
 GDBHISTFILE
 geotiff
+getconf
 GETIPLAYERUSERPREFS
 GHCUP
 ghostscript
@@ -172,7 +184,6 @@ HISTFILE
 HISTSIZE
 hledger
 hmac
-Hoockdeck
 HOOKDECK
 hsts
 htmlcov
@@ -181,6 +192,7 @@ hushlogin
 hushlogins
 HVER
 ICEAUTHORITY
+ICEBRIDGE
 iface
 imapfilter
 INFLUXD
@@ -224,6 +236,7 @@ lein
 LESSHISTFILE
 LESSHISTSIZE
 levelname
+libarrow
 libavif
 libblosc
 libboost
@@ -233,6 +246,9 @@ libcairo
 libdb
 libde265
 libdjvulibre
+libdraco
+libe57format
+libeigen3
 libev
 libexif
 libexpat
@@ -249,6 +265,7 @@ libgif
 libglib
 libgraphviz
 libgs
+libhdf5
 libheif
 libimagequant
 libio
@@ -257,6 +274,7 @@ libjemalloc
 libjpeg
 libjsoncpp
 libkrb5
+liblaszip
 liblcms2
 liblqr
 libltdl
@@ -271,19 +289,21 @@ libopenexr
 libopenjp2
 libpango
 libperl
+libpq
 libproj
 libraw
 libreadline
 librsvg2
-librsvg2
 libspatialindex
 libsqlite3
+libtiledb
 libuemf
 libvips
 libwebp
 libwmf
 libx11
 libxcursor
+libxerces
 libxext
 libxft
 libxi
@@ -307,6 +327,7 @@ lxcfs
 lycheecache
 lycheeignore
 magick
+Makefiles
 mathematica
 matthewpi
 mednafen
@@ -351,6 +372,7 @@ nounset
 NOWARNINGS
 npmpackagejsonlintrc
 nproc
+NPROCESSORS
 nslookup
 ntpconf
 NTPSERVERPOOL
@@ -363,6 +385,7 @@ opam
 OPAMROOT
 opencontainers
 openexr
+OPENSCENEGRAPH
 OPTEDIN
 OPTIN
 OPTOUT
@@ -385,6 +408,7 @@ pixbuf
 pkill
 plocate
 PNPPOWERSHELL
+policymap
 postgis
 potrace
 preconfigured
@@ -426,6 +450,7 @@ Quickwit
 raku
 Rasa
 RCFILE
+RDBLIB
 rdepends
 readlink
 realpath
@@ -441,6 +466,7 @@ requiretty
 RESTler
 RGBA
 richterger
+RIVLIB
 rlwrap
 rmem
 Roboto
@@ -464,6 +490,7 @@ setgid
 sfctl
 sfdx
 shakram
+shdoc
 shellcheck
 shellformat
 shfmt
@@ -493,6 +520,7 @@ talismanrc
 tamasfe
 taskfile
 tcpdump
+tcsh
 tekton
 tektonlintrc
 TELE
@@ -500,34 +528,7 @@ Telepresence
 terminfo
 terragrunt
 terrascan
-liblaszip
-libpq
-libarrow
-libtiledb
-libdraco
-libe57format
-libhdf5
-_NPROCESSORS_ONLN
-ICEBRIDGE
-DBUILD_PLUGIN_MBIO
-DBUILD_PLUGIN_NITF
-DBUILD_PLUGIN_PGPOINTCLOUD
-DWITH_LASZIP
-DWITH_LAZPERF
-DWITH_ZSTD
-DCMAKE_BUILD_RPATH
-shdoc
-tlsv1.2
-DCMAKE_INSTALL_RPATH
-libeigen3
-tcsh
-gdalinfo
-RIVLIB
-RDBLIB
-OPENSCENEGRAPH
-libxerces
 Testim
-Makefiles
 texlive
 texmacs
 texmf
@@ -542,6 +543,7 @@ timescaledb
 timestamping
 timesyncd
 timonwong
+tlsv1.2
 tmpfs
 toplevel
 trivycache
@@ -602,7 +604,3 @@ xsessionrc
 ZDOTDIR
 zplug
 ZSTD
-connrefused
-policymap
-getconf
-NPROCESSORS
