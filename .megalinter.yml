@@ -466,6 +466,7 @@ SPELL_CSPELL_PRE_COMMANDS:
       npm install --no-audit --no-fund --silent
       @cspell/cspell-json-reporter
       @cspell/dict-pokemon
+      @cspell/dict-gis
     cwd: root
 
 # lychee: https://github.com/lycheeverse/lychee
